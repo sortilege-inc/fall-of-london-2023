@@ -1,0 +1,95 @@
+{
+ "kind": "sortilege-vtt-character",
+ "v": 2,
+ "system": "vtm5e",
+ "templateId": "#vtm5Kindred000000001",
+ "name": "Tony Castelli",
+ "values": {
+  "Name": "Tony Castelli",
+  "Chronicle": "Fall of London",
+  "Clan": "Brujah",
+  "Sire": "Saeth",
+  "Ambition": "To claim the city as your own, free of sect or clan.",
+  "Predator": "Bagger",
+  "Generation": 10,
+  "Humanity": 7,
+  "Blood Potency": 1,
+  "Strength": 2,
+  "Dexterity": 1,
+  "Stamina": 2,
+  "Charisma": 4,
+  "Manipulation": 3,
+  "Composure": 3,
+  "Intelligence": 2,
+  "Wits": 3,
+  "Resolve": 2,
+  "Health": 5,
+  "Willpower": 5,
+  "Athletics": 0,
+  "Brawl": 1,
+  "Craft": 0,
+  "Drive": 1,
+  "Firearms": 0,
+  "Melee": 2,
+  "Larceny": 3,
+  "Stealth": 0,
+  "Survival": 1,
+  "Animal Ken": 0,
+  "Etiquette": 0,
+  "Insight": 2,
+  "Intimidation": 1,
+  "Leadership": 0,
+  "Performance": 0,
+  "Persuasion": 3,
+  "Streetwise": 4,
+  "Subterfuge": 0,
+  "Academics": 0,
+  "Awareness": 2,
+  "Finance": 0,
+  "Investigation": 0,
+  "Medicine": 0,
+  "Occult": 0,
+  "Politics": 0,
+  "Science": 0,
+  "Technology": 0,
+  "Specialties": [
+   {
+    "Skill": "Streetwise",
+    "Specialty": "Black Market"
+   }
+  ],
+  "Disciplines": [
+   {
+    "Discipline": "Celerity",
+    "Dots": 2,
+    "Powers": [
+     "Cat’s Grace",
+     "Fleetness"
+    ]
+   },
+   {
+    "Discipline": "Obfuscate",
+    "Dots": 1,
+    "Powers": [
+     "Cloak of Shadows"
+    ]
+   },
+   {
+    "Discipline": "Presence",
+    "Dots": 1,
+    "Powers": [
+     "Awe"
+    ]
+   }
+  ],
+  "Touchstones & Convictions": [
+   "Everyone should be free to be what they truly are."
+  ],
+  "Date of death": "1940",
+  "Date of birth": "1918"
+ },
+ "live": {
+  "hunger": 0
+ },
+ "source": "The Fall of London, Appendix III: Playable Characters (corpus fall-of-london, playable-characters)"
+}

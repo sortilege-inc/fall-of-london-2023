@@ -1,0 +1,90 @@
+{
+ "kind": "sortilege-vtt-character",
+ "v": 2,
+ "system": "vtm5e",
+ "templateId": "#vtm5Kindred000000001",
+ "name": "Alice Mockingdale",
+ "values": {
+  "Name": "Alice Mockingdale",
+  "Chronicle": "Fall of London",
+  "Clan": "Tremere",
+  "Sire": "Ashura Shaw",
+  "Ambition": "To ensure you can delight in the pleasures of immortality forever.",
+  "Predator": "Osiris",
+  "Generation": 10,
+  "Humanity": 6,
+  "Blood Potency": 2,
+  "Strength": 2,
+  "Dexterity": 2,
+  "Stamina": 3,
+  "Charisma": 2,
+  "Manipulation": 2,
+  "Composure": 1,
+  "Intelligence": 3,
+  "Wits": 3,
+  "Resolve": 4,
+  "Health": 6,
+  "Willpower": 5,
+  "Athletics": 2,
+  "Brawl": 1,
+  "Craft": 0,
+  "Drive": 0,
+  "Firearms": 0,
+  "Melee": 0,
+  "Larceny": 0,
+  "Stealth": 3,
+  "Survival": 3,
+  "Animal Ken": 2,
+  "Etiquette": 0,
+  "Insight": 3,
+  "Intimidation": 0,
+  "Leadership": 0,
+  "Performance": 0,
+  "Persuasion": 1,
+  "Streetwise": 0,
+  "Subterfuge": 0,
+  "Academics": 0,
+  "Awareness": 1,
+  "Finance": 0,
+  "Investigation": 2,
+  "Medicine": 0,
+  "Occult": 4,
+  "Politics": 0,
+  "Science": 0,
+  "Technology": 0,
+  "Specialties": [
+   {
+    "Skill": "Occult",
+    "Specialty": "Witchcraft"
+   }
+  ],
+  "Disciplines": [
+   {
+    "Discipline": "Auspex",
+    "Dots": 1,
+    "Powers": [
+     "Sense the Unseen"
+    ]
+   },
+   {
+    "Discipline": "Blood Sorcery",
+    "Dots": 3,
+    "Powers": [
+     "A Taste for Blood",
+     "Extinguish Vitae",
+     "Scorpion’s Touch",
+     "Craft Bloodstone"
+    ]
+   }
+  ],
+  "Touchstones & Convictions": [
+   "The key to power and enlightenment is magic; the key to magic is Mithras."
+  ],
+  "Date of death": "1867",
+  "Date of birth": "1847"
+ },
+ "live": {
+  "hunger": 0
+ },
+ "source": "The Fall of London, Appendix III: Playable Characters (corpus fall-of-london, playable-characters)"
+}

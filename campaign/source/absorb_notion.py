@@ -13,6 +13,9 @@ Reads the export kept beside this repo (../notion-export/, never committed) and 
   gm.rules      Rules Quickreference
   gm.people     every row of the characters table, player-visible or not, every column
   campaign/assets/gm/   the pages' images (the book's handouts), linked where they stood
+  party         the heralds' character files (campaign/characters/*.json, written from the book
+                by convert_pregens.py), as Coterie members with fixed ids — the table opens with
+                them; the seed never re-adds one the GM removed
 
 Text is verbatim: each block's words are the page's, in the GM text's small Markdown (**bold**,
 *italic*, `- ` lists, `> ` quotes, [links](…)). Nested list depth, which that Markdown does not
@@ -239,7 +242,16 @@ def main():
         return o
     overview, arc, rules, people = redact([overview, arc, rules, people])
 
-    pack = {"kind": PACK_KIND, "version": 1, "arc": arc, "gm": {"overview": overview, "rules": rules, "people": people}}
+    party = []
+    order = ["alice-mockingdale", "tony-castelli", "lady-catherine-montague"]  # the book's order
+    files = glob.glob(os.path.join(CAMPAIGN, "characters", "*.vtm5e-character.json"))
+    for f in sorted(files, key=lambda f: (order.index(os.path.basename(f).split(".")[0]) if os.path.basename(f).split(".")[0] in order else 99, f)):
+        c = json.load(open(f, encoding="utf-8"))
+        party.append({"id": uid("pc", c["name"]), "templateId": c["templateId"], "name": c["name"],
+                      "source": {"kind": "file", "name": os.path.basename(f)}, "character": c["values"],
+                      "live": c.get("live") or {"hunger": 0}, "notes": ""})
+
+    pack = {"kind": PACK_KIND, "version": 1, "party": party, "arc": arc, "gm": {"overview": overview, "rules": rules, "people": people}}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as fh:
         json.dump(pack, fh, ensure_ascii=False, indent=1)
@@ -255,8 +267,8 @@ def main():
         if not os.path.isfile(dst) or os.path.getmtime(dst) < os.path.getmtime(path):
             subprocess.run(["magick", path + "[0]", "-strip", "-resize", "1600x1600>", "-quality", "84",
                             "-define", "webp:method=6", dst], check=True)
-    print("absorb_notion: overview %d · arc %d sessions (%d beats) · rules %d · people %d · %d images → %s"
-          % (len(overview), len(arc), sum(len(c.get("sections") or []) for c in arc), len(rules), len(people),
+    print("absorb_notion: party %d · overview %d · arc %d sessions (%d beats) · rules %d · people %d · %d images → %s"
+          % (len(party), len(overview), len(arc), sum(len(c.get("sections") or []) for c in arc), len(rules), len(people),
              len(want), os.path.relpath(OUT, REPO)))
 
 

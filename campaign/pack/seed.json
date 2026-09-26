@@ -1,6 +1,289 @@
 {
  "kind": "sortilege-vtt-campaign",
  "version": 1,
+ "party": [
+  {
+   "id": "fol-pc-alice-mockingdale",
+   "templateId": "#vtm5Kindred000000001",
+   "name": "Alice Mockingdale",
+   "source": {
+    "kind": "file",
+    "name": "alice-mockingdale.vtm5e-character.json"
+   },
+   "character": {
+    "Name": "Alice Mockingdale",
+    "Chronicle": "Fall of London",
+    "Clan": "Tremere",
+    "Sire": "Ashura Shaw",
+    "Ambition": "To ensure you can delight in the pleasures of immortality forever.",
+    "Predator": "Osiris",
+    "Generation": 10,
+    "Humanity": 6,
+    "Blood Potency": 2,
+    "Strength": 2,
+    "Dexterity": 2,
+    "Stamina": 3,
+    "Charisma": 2,
+    "Manipulation": 2,
+    "Composure": 1,
+    "Intelligence": 3,
+    "Wits": 3,
+    "Resolve": 4,
+    "Health": 6,
+    "Willpower": 5,
+    "Athletics": 2,
+    "Brawl": 1,
+    "Craft": 0,
+    "Drive": 0,
+    "Firearms": 0,
+    "Melee": 0,
+    "Larceny": 0,
+    "Stealth": 3,
+    "Survival": 3,
+    "Animal Ken": 2,
+    "Etiquette": 0,
+    "Insight": 3,
+    "Intimidation": 0,
+    "Leadership": 0,
+    "Performance": 0,
+    "Persuasion": 1,
+    "Streetwise": 0,
+    "Subterfuge": 0,
+    "Academics": 0,
+    "Awareness": 1,
+    "Finance": 0,
+    "Investigation": 2,
+    "Medicine": 0,
+    "Occult": 4,
+    "Politics": 0,
+    "Science": 0,
+    "Technology": 0,
+    "Specialties": [
+     {
+      "Skill": "Occult",
+      "Specialty": "Witchcraft"
+     }
+    ],
+    "Disciplines": [
+     {
+      "Discipline": "Auspex",
+      "Dots": 1,
+      "Powers": [
+       "Sense the Unseen"
+      ]
+     },
+     {
+      "Discipline": "Blood Sorcery",
+      "Dots": 3,
+      "Powers": [
+       "A Taste for Blood",
+       "Extinguish Vitae",
+       "Scorpion’s Touch",
+       "Craft Bloodstone"
+      ]
+     }
+    ],
+    "Touchstones & Convictions": [
+     "The key to power and enlightenment is magic; the key to magic is Mithras."
+    ],
+    "Date of death": "1867",
+    "Date of birth": "1847"
+   },
+   "live": {
+    "hunger": 0
+   },
+   "notes": ""
+  },
+  {
+   "id": "fol-pc-tony-castelli",
+   "templateId": "#vtm5Kindred000000001",
+   "name": "Tony Castelli",
+   "source": {
+    "kind": "file",
+    "name": "tony-castelli.vtm5e-character.json"
+   },
+   "character": {
+    "Name": "Tony Castelli",
+    "Chronicle": "Fall of London",
+    "Clan": "Brujah",
+    "Sire": "Saeth",
+    "Ambition": "To claim the city as your own, free of sect or clan.",
+    "Predator": "Bagger",
+    "Generation": 10,
+    "Humanity": 7,
+    "Blood Potency": 1,
+    "Strength": 2,
+    "Dexterity": 1,
+    "Stamina": 2,
+    "Charisma": 4,
+    "Manipulation": 3,
+    "Composure": 3,
+    "Intelligence": 2,
+    "Wits": 3,
+    "Resolve": 2,
+    "Health": 5,
+    "Willpower": 5,
+    "Athletics": 0,
+    "Brawl": 1,
+    "Craft": 0,
+    "Drive": 1,
+    "Firearms": 0,
+    "Melee": 2,
+    "Larceny": 3,
+    "Stealth": 0,
+    "Survival": 1,
+    "Animal Ken": 0,
+    "Etiquette": 0,
+    "Insight": 2,
+    "Intimidation": 1,
+    "Leadership": 0,
+    "Performance": 0,
+    "Persuasion": 3,
+    "Streetwise": 4,
+    "Subterfuge": 0,
+    "Academics": 0,
+    "Awareness": 2,
+    "Finance": 0,
+    "Investigation": 0,
+    "Medicine": 0,
+    "Occult": 0,
+    "Politics": 0,
+    "Science": 0,
+    "Technology": 0,
+    "Specialties": [
+     {
+      "Skill": "Streetwise",
+      "Specialty": "Black Market"
+     }
+    ],
+    "Disciplines": [
+     {
+      "Discipline": "Celerity",
+      "Dots": 2,
+      "Powers": [
+       "Cat’s Grace",
+       "Fleetness"
+      ]
+     },
+     {
+      "Discipline": "Obfuscate",
+      "Dots": 1,
+      "Powers": [
+       "Cloak of Shadows"
+      ]
+     },
+     {
+      "Discipline": "Presence",
+      "Dots": 1,
+      "Powers": [
+       "Awe"
+      ]
+     }
+    ],
+    "Touchstones & Convictions": [
+     "Everyone should be free to be what they truly are."
+    ],
+    "Date of death": "1940",
+    "Date of birth": "1918"
+   },
+   "live": {
+    "hunger": 0
+   },
+   "notes": ""
+  },
+  {
+   "id": "fol-pc-lady-catherine-montague",
+   "templateId": "#vtm5Kindred000000001",
+   "name": "Lady Catherine Montague",
+   "source": {
+    "kind": "file",
+    "name": "lady-catherine-montague.vtm5e-character.json"
+   },
+   "character": {
+    "Name": "Lady Catherine Montague",
+    "Chronicle": "Fall of London",
+    "Clan": "Ventrue",
+    "Sire": "Angelique Darkwood",
+    "Ambition": "To protect the city of London.",
+    "Predator": "Siren",
+    "Generation": 11,
+    "Humanity": 6,
+    "Blood Potency": 2,
+    "Strength": 1,
+    "Dexterity": 2,
+    "Stamina": 3,
+    "Charisma": 3,
+    "Manipulation": 2,
+    "Composure": 3,
+    "Intelligence": 4,
+    "Wits": 3,
+    "Resolve": 3,
+    "Health": 4,
+    "Willpower": 5,
+    "Athletics": 1,
+    "Brawl": 0,
+    "Craft": 0,
+    "Drive": 0,
+    "Firearms": 0,
+    "Melee": 0,
+    "Larceny": 0,
+    "Stealth": 0,
+    "Survival": 0,
+    "Animal Ken": 0,
+    "Etiquette": 3,
+    "Insight": 2,
+    "Intimidation": 1,
+    "Leadership": 2,
+    "Performance": 2,
+    "Persuasion": 3,
+    "Streetwise": 0,
+    "Subterfuge": 3,
+    "Academics": 1,
+    "Awareness": 0,
+    "Finance": 4,
+    "Investigation": 0,
+    "Medicine": 0,
+    "Occult": 0,
+    "Politics": 0,
+    "Science": 0,
+    "Technology": 0,
+    "Specialties": [
+     {
+      "Skill": "Persuasion",
+      "Specialty": "Seduction"
+     }
+    ],
+    "Disciplines": [
+     {
+      "Discipline": "Dominate",
+      "Dots": 1,
+      "Powers": [
+       "Compel"
+      ]
+     },
+     {
+      "Discipline": "Presence",
+      "Dots": 3,
+      "Powers": [
+       "Awe",
+       "Daunt",
+       "Entrancement"
+      ]
+     }
+    ],
+    "Clan Bane": "Can only feed from the rich",
+    "Touchstones & Convictions": [
+     "Sovereignty springs from from breeding and style."
+    ],
+    "Date of death": "1854",
+    "Date of birth": "1832"
+   },
+   "live": {
+    "hunger": 0
+   },
+   "notes": ""
+  }
+ ],
  "arc": [
   {
    "id": "fol-session-1-awakenings",

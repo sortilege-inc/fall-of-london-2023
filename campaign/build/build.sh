@@ -6,6 +6,8 @@
 #   bash campaign/build/build.sh
 set -euo pipefail
 cd "$(dirname "$0")/../.."
+python3 campaign/source/convert_pregens.py
+python3 campaign/source/check_pregens.py
 if [ -d ../notion-export ]; then
   python3 campaign/source/convert_people.py
   python3 campaign/source/absorb_notion.py
