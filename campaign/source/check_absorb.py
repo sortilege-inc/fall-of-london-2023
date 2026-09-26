@@ -101,7 +101,7 @@ def main():
                 fails.append("characters: %s: %s %r not carried" % (r["Name"], c, v))
         for pic in [p for p in r["Picture"].split(",") if p.strip()]:
             cells += 1
-            if "[Image: %s]" % os.path.basename(A.unquote(pic.strip())) not in txt:
+            if "[Image: %s]" % A.image_label(os.path.basename(A.unquote(pic.strip()))) not in txt:
                 fails.append("characters: %s: picture %r not linked" % (r["Name"], pic))
     print("  %-26s %6d rows · %d cells · %s" % ("Characters table", len(rows), cells, "OK" if not any(f.startswith("characters") for f in fails) else "FAIL"))
     if len(people) != len(rows):

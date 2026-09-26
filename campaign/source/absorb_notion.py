@@ -84,14 +84,36 @@ def uid(*parts):
 images = []
 
 
+# An image generator names each file "<account>_<prompt>_<uuid>.png"; the account is the owner's, not
+# the repo's to publish (owner, 2026-09-26). image_label drops that first word from a name of that
+# shape, for the file written here and for the label the seed prints (check_absorb reads it the same way).
+_GENERATED = re.compile(r"^[A-Za-z0-9]+_(?=.+_[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.\w+$)")
+
+
+def image_label(basename):
+    return _GENERATED.sub("", basename)
+
+
+image_names = {}                # export path -> its name here, each image its own
+
+
 def image(src, from_page):
     rel = unquote(src)
     path = os.path.normpath(os.path.join(os.path.dirname(from_page), rel))
     if not os.path.isfile(path):
         sys.exit("absorb_notion: image %r (in %s) is not in the export" % (src, os.path.basename(from_page)))
-    name = slug(os.path.splitext(os.path.relpath(path, ROOT))[0].replace("Vampire the Masquerade - Fall of London", "")) + ".webp"
-    images.append((path, name))
-    return "[Image: %s](campaign/assets/gm/%s)" % (os.path.basename(path), name)
+    if path not in image_names:
+        rel_path = os.path.join(os.path.dirname(os.path.relpath(path, ROOT)), image_label(os.path.basename(path)))
+        base = slug(os.path.splitext(rel_path)[0].replace("Vampire the Masquerade - Fall of London", ""))
+        # two images whose names agree as far as the slug reads them (Oliver Kensington's two portraits)
+        # are two files, not one written over the other
+        name, i = base, 1
+        while name + ".webp" in image_names.values():
+            i += 1
+            name = "%s-%d" % (base, i)
+        image_names[path] = name + ".webp"
+        images.append((path, image_names[path]))
+    return "[Image: %s](campaign/assets/gm/%s)" % (image_label(os.path.basename(path)), image_names[path])
 
 
 def text_of(blocks, from_page):
