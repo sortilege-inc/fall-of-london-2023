@@ -2,16 +2,16 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "vtt-vtm5e",
+      "name": "fall",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8738"],
-      "port": 8738
+      "runtimeArgs": ["-m", "http.server", "8744"],
+      "port": 8744
     },
     {
-      "name": "vtt-vtm5e-worker",
+      "name": "fall-worker",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["wrangler", "dev", "--port", "8789"],
-      "port": 8789,
+      "runtimeArgs": ["wrangler", "dev", "--port", "8797"],
+      "port": 8797,
       "cwd": "worker"
     }
   ]
