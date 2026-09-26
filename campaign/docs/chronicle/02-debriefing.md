@@ -1,7 +1,6 @@
 ---
 title: Debriefing
-part: A Dark & Stormy Night
-date: Monday, 19 March 2012
+part: Monday, 19 March 2012
 ---
 
 There was a pile of clothes. Tony found slacks, loafers and a collared shirt. Alice found

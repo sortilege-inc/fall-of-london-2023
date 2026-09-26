@@ -108,12 +108,13 @@
     }
     p.appendChild(el('h2', { class: 'chapter-h' }, ['The Chronicle']));
     if (!all.length) return p.appendChild(empty('told'));
+    let n = 1;
     groups(all, 'part').forEach((g) => {
       if (g.name) p.appendChild(el('h4', { class: 'fall-group' }, [g.name]));
-      p.appendChild(el('ol', { class: 'fall-toc' }, g.pages.map((x) => el('li', {}, [
+      p.appendChild(el('ol', { class: 'fall-toc', start: String(n) }, g.pages.map((x) => (n++, el('li', {}, [
         el('a', { href: ctx.href('chronicle', [x.slug]) }, [x.title]),
         [x.played, x.date].filter(Boolean).length ? el('span', { class: 'muted small' }, [' · ' + [x.played, x.date].filter(Boolean).join(' · ')]) : null,
-      ]))));
+      ])))));
     });
   }
 

@@ -1,7 +1,6 @@
 ---
 title: Awakenings
-part: A Dark & Stormy Night
-date: Monday, 19 March 2012
+part: Monday, 19 March 2012
 ---
 
 Tony woke from the toes up. First his fingertips, then the long bones of his arms and legs, stiff
