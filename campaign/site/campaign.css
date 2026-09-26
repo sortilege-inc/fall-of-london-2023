@@ -1,0 +1,81 @@
+/* campaign/site/campaign.css — Fall of London's look, in the VTT's own tokens (assets/css/vtm5e.css).
+   After the Mind's Eye Theatre *Laws of the Night* cover: ivory marble with hairline grey veins,
+   one red brushstroke, black classical capitals. The VTT's dark family (--night*, --bone*) is
+   re-pointed at ivory and ink, so every page — site, table, player — takes the ivory without an
+   upstream file being touched. */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap');
+
+:root {
+  --night: #efe9dc;       /* the ivory ground */
+  --night-2: #e7e0cf;
+  --night-3: #d6ccb7;     /* hairlines on the ground */
+  --bone: #1c1917;        /* text on the ground: ink */
+  --bone-2: #4d463f;
+  --paper: #fbf8f1;       /* the page: a lighter ivory */
+  --paper-2: #f2ecdf;
+  --ink: #1c1917;
+  --ink-2: #4d463f;
+  --muted: #7b7263;
+  --rule: #ddd3c0;
+  --blood: #a3111e;       /* the brushstroke */
+  --blood-2: #bf1a2b;
+  --blood-dark: #6e0a14;
+  --font-display: 'Cinzel', 'Trajan Pro', 'Bodoni Moda', serif;
+}
+body { background: var(--night) url("../assets/marble.svg") center top / 1400px auto repeat; color: var(--bone); }
+.site-head { background: rgba(239, 233, 220, .94); border-bottom: 1px solid var(--night-3); backdrop-filter: blur(3px); }
+.brand-title { font-weight: 600; letter-spacing: .06em; }
+
+.fall-hero { padding-bottom: 20px; position: relative; }
+.fall-title { font-family: var(--font-display); font-weight: 600; font-size: clamp(38px, 7vw, 66px); line-height: 1.05; letter-spacing: .04em; }
+.fall-title small { display: block; font-size: .38em; letter-spacing: .3em; color: var(--blood); margin-bottom: 6px; }
+/* the brushstroke: an open red ring behind the title, as on the cover */
+.fall-title-wrap { position: relative; display: inline-block; }
+.fall-title-wrap .fall-title { position: relative; }
+.fall-ring { position: absolute; left: -70px; top: -52px; width: 230px; height: 230px; pointer-events: none; opacity: .85; }
+.fall-card { min-height: 96px; }
+.fall-home { margin: 0 auto 26px; }
+
+/* prose from campaign/docs */
+.fall-prose { font-size: 19.5px; line-height: 1.6; }
+.fall-prose h2 { font-family: var(--font-display); font-weight: 400; font-size: 25px; color: var(--blood); margin: 34px 0 10px; letter-spacing: .03em; }
+.fall-prose h3 { font-family: var(--font-display); font-weight: 400; font-size: 20px; margin: 24px 0 6px; }
+.fall-prose p { margin: 0 0 .85em; }
+.fall-prose hr { border: 0; text-align: center; margin: 26px 0; }
+.fall-prose hr::after { content: '☉'; color: var(--blood); font-size: 18px; }
+.fall-prose blockquote { margin: 14px 0; padding: 4px 18px; border-left: 3px solid var(--blood); color: var(--ink-2); font-style: italic; }
+.fall-prose ul { padding-left: 1.2em; }
+.fall-prose img { max-width: 100%; height: auto; }
+.fall-prose a.doc-link { color: var(--blood); text-decoration: none; border-bottom: 1px dotted var(--blood); }
+
+/* the Chronicle */
+.fall-part { color: var(--blood); margin-bottom: 2px; }
+.fall-paging { display: flex; justify-content: space-between; gap: 18px; margin-top: 30px; padding-top: 12px; border-top: 1px solid var(--rule); font-family: var(--font-ui); font-size: 13px; letter-spacing: .04em; }
+.fall-paging a { color: var(--blood); text-decoration: none; }
+h4.fall-group { font-family: var(--font-ui); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--blood); margin: 24px 0 8px; }
+ol.fall-toc, ul.fall-toc { font-size: 20px; line-height: 1.7; }
+ol.fall-toc a, ul.fall-toc a { color: var(--bone); text-decoration: none; }
+ol.fall-toc a:hover, ul.fall-toc a:hover { color: var(--blood); }
+
+/* people */
+.fall-person { display: flex; gap: 12px; align-items: flex-start; text-decoration: none; }
+.fall-thumb { width: 56px; height: 56px; object-fit: cover; border-radius: 50%; border: 2px solid var(--blood); flex: none; }
+.fall-thumb.none { display: inline-block; background: var(--paper-2); border-color: var(--night-3); }
+.fall-portrait { float: right; width: min(260px, 40%); margin: 0 0 14px 22px; border: 1px solid var(--rule); box-shadow: 0 4px 14px rgba(60, 40, 20, .18); }
+.fall-person-page::after { content: ''; display: block; clear: both; }
+.fall-dead { color: var(--blood); font-family: var(--font-ui); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+.fall-person.dead .fall-thumb { filter: grayscale(1); opacity: .75; }
+
+@media (max-width: 720px) {
+  .fall-portrait { float: none; display: block; width: 100%; margin: 0 0 14px; }
+  .site-reader.solo { padding: 22px 18px 30px; }
+  .fall-prose { font-size: 18px; }
+  .fall-ring { width: 150px; height: 150px; left: -24px; top: -34px; }
+}
+
+/* the VTT's page shadow is cut for a black ground; on ivory it is a smudge */
+.site-reader { box-shadow: 0 1px 0 var(--night-3), 0 10px 30px rgba(70, 50, 30, .13); border: 1px solid var(--rule); }
+.tray { box-shadow: 0 16px 44px rgba(70, 50, 30, .28); }
+/* the veil in front of /gm/ (engine gm.css hardcodes a near-black) */
+.gm-veil { background: var(--night) url("../assets/marble.svg") center / 1400px auto repeat; }
+.gm-veil-box { border: 1px solid var(--rule); box-shadow: 0 10px 30px rgba(70, 50, 30, .15); }

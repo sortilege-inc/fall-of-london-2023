@@ -16,9 +16,10 @@ window.VttConfig = {
   //   notes: { src: 'campaign/docs/state.html', title: '…', class: '…',
   //            gate: { title: '…', text: '…', enter: 'Enter' } }
   // a .html src is the instance's own fragment, inserted as it is; anything else reads as Markdown.
-  defaultCampaign: { name: 'Fall of London', modules: ['chronicle'], books: [] },
+  // the GM's own material (the owner's Notion pages, moved whole by campaign/source/absorb_notion.py)
+  defaultCampaign: { name: 'Fall of London', modules: ['chronicle'], books: [], seed: 'campaign/pack/seed.json' },
   // the three panels the GM page opens on (engine/app.js)
-  defaultSlots: ['chronicle', 'party', 'inspector'],
+  defaultSlots: ['overview', 'scenes', 'people'],
   // What an instance adds to these pages (engine/instance.js). Upstream declares none, so
   // every stage tag is a no-op here; a campaign repo forked from this VTT owns engine/config.js
   // and fills this in. Its DSL layer is built by build/build_layer.sh into its own data folder.

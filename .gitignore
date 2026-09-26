@@ -11,3 +11,5 @@ node_modules/
 !.claude/skills/
 # the campaign's Foundry exports are kept, but never its relay key
 campaign/source/**/*.key
+# the owner's Notion export lives beside the repo (../notion-export), never in it
+campaign/source/__pycache__/
